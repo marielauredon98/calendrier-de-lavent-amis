@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Ajouter l'événement de clic
       day.addEventListener("click", function() {
-        if (dayi <= today) {
+        if (date <= today) {
           day.classList.toggle("flipped"); // Retourne la carte
           let flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
           if (day.classList.contains("flipped")) {
