@@ -71,7 +71,8 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       // Gérer le verrouillage des jours
-      if (dayi > today) {
+      date = new Date(`2024-12-${dayi < 10 ? '0' : ''}${dayi}`)
+      if ( date > today) {
         day.classList.add("locked");
       } else {
         day.classList.add("unlocked");
