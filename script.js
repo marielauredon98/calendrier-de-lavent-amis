@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
       10: "Partage ton film de Noël préféré.",
       11: "Mets l'image de quelque chose que tu aimes en photo de profil.",
       12: "Mets un fond d'écran de Noël sur ton téléphone.",
-      13: "Dis quelque chose de positif lors de ta prochaine conversation whatsapp.",
+      13: "Dis quelque chose de positif dans ton prochain whatsapp.",
       14: "Tu es assidu(e). Bravo ! Passe un bon week-end.",
       15: "Demain, porte du rouge ou du blanc.",
       16: "Porte un accessoire de Noël.",
