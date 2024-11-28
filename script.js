@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Gérer le verrouillage des jours
       if (dayi > today) {
-        day.classList.add("unlocked");
+        day.classList.add("locked");
       } else {
         day.classList.add("unlocked");
       }
