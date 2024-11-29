@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const days = [1, 4, 18, 10, 6, 23, 3, 12, 16, 5, 19, 2, 25, 7, 11, 13, 8, 21, 9, 14, 24, 17, 20, 15, 22]
 
-    // Génération des 25 divs du calendrier
+     // Génération des 25 divs du calendrier
     for (let i = 0; i <= days.length-1; i++) {
       const dayi = days[i];
       const day = document.createElement("div");
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       const front = document.createElement("div");
       front.classList.add("front");
-      front.style.backgroundImage = "url('cadeau.png')"; // Remplace avec l'image de ton choix
+      front.style.backgroundImage = "url('cadeau.png')";
       const dayNumber = document.createElement("span");
       dayNumber.classList.add("day-number");
       dayNumber.textContent = dayi;
@@ -65,31 +65,24 @@ document.addEventListener("DOMContentLoaded", function() {
       day.appendChild(card);
       calendar.appendChild(day);
 
-        if (localStorage.getItem("flippedCards")) {
-         const flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
-         if (flippedCards.includes(dayi)) {
+      const flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
+      if (flippedCards.includes(dayi)) {
         day.classList.add("flipped");
       }
-        }
-
-
 
       // Gérer le verrouillage des jours
       date = new Date(`2024-12-${dayi < 10 ? '0' : ''}${dayi}`)
-      if ( date > today) {
+      if (date > today) {
         day.classList.add("locked");
       } else {
         day.classList.add("unlocked");
       }
 
       // Ajouter l'événement de clic
-      localStorage.removeItem("flippedCards");
       day.addEventListener("click", function() {
         if (date <= today) {
-          day.classList.toggle("flipped"); // Retourne la carte
-          if (localStorage.getItem("flippedCards")) {
-             let flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
-          }
+          day.classList.toggle("flipped");
+          let flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
           if (day.classList.contains("flipped")) {
             flippedCards.push(dayi);
           } else {
@@ -97,8 +90,8 @@ document.addEventListener("DOMContentLoaded", function() {
           }
           localStorage.setItem("flippedCards", JSON.stringify(flippedCards));
         } else {
-          day.classList.add("shake"); // Effet de shake
-          setTimeout(() => day.classList.remove("shake"), 500); // Supprime l'effet
+          day.classList.add("shake");
+          setTimeout(() => day.classList.remove("shake"), 500);
         }
       });
     }
