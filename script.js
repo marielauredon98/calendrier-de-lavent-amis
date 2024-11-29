@@ -67,11 +67,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
         if (localStorage.getItem("flippedCards")) {
          const flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
-        }
-
-      if (flippedCards.includes(dayi)) {
+         if (flippedCards.includes(dayi)) {
         day.classList.add("flipped");
       }
+        }
+
+
 
       // Gérer le verrouillage des jours
       date = new Date(`2024-12-${dayi < 10 ? '0' : ''}${dayi}`)
