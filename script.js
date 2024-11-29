@@ -65,7 +65,10 @@ document.addEventListener("DOMContentLoaded", function() {
       day.appendChild(card);
       calendar.appendChild(day);
 
-      const flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
+        if (localStorage.getItem("flippedCards")) {
+         const flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
+        }
+
       if (flippedCards.includes(dayi)) {
         day.classList.add("flipped");
       }
