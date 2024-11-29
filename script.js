@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
 
       // Ajouter l'événement de clic
-      localStorage.setItem("flippedCards", []);
+      localStorage.removeItem("flippedCards");
       day.addEventListener("click", function() {
         if (date <= today) {
           day.classList.toggle("flipped"); // Retourne la carte
