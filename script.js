@@ -83,7 +83,9 @@ document.addEventListener("DOMContentLoaded", function() {
       day.addEventListener("click", function() {
         if (date <= today) {
           day.classList.toggle("flipped"); // Retourne la carte
-          let flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
+          if (localStorage.getItem("flippedCards")) {
+             let flippedCards = JSON.parse(localStorage.getItem("flippedCards")) || [];
+          }
           if (day.classList.contains("flipped")) {
             flippedCards.push(dayi);
           } else {
