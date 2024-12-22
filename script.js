@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
       20: "Partage un message de Noël dans ton statut.",
       21: "Pourquoi le Père Noël n'a pas été à ton école ?",
       22: "Parce qu'il voulait rester Santa Claus (sans ta classe).",
-      23: "As-tu fini d'emballer les cadeaux ?",
+      23: "En retard sur les cadeaux ? 5 pompes : Danse de la joie.",
       24: "J-1... Bon réveillon !",
       25: "Joyeux Noël !"
     };
